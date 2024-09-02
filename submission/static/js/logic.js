@@ -9,7 +9,7 @@ function markerSize(mag) {
   
   
     if (mag > 0) {
-      radius = mag ** 7;
+      radius = mag * 5;
     }
   
     return radius
@@ -68,7 +68,7 @@ function markerSize(mag) {
   
         // make marker
         let marker = L.marker(point);
-        let popup = `<h1>${row.properties.title}</h1>`;
+        let popup = `<h1>${row.properties.title}</h1><hr><h3>Magnitude: ${row.properties.mag}</h3><hr><h3>Location: ${row.properties.place}</h3><hr><h3>Depth: ${location.coordinates[2]}</h3>`;
         marker.bindPopup(popup);
         markers.addLayer(marker);
   
