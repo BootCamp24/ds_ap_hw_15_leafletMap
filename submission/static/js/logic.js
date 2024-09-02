@@ -9,7 +9,7 @@ function markerSize(mag) {
   
   
     if (mag > 0) {
-      radius = mag * 5;
+      radius = mag * 6000;
     }
   
     return radius
